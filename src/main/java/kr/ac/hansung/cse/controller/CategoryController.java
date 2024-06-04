@@ -35,9 +35,7 @@ public class CategoryController {
         if(category == null) {
             return ResponseEntity.noContent().build();
         }
-
-        categoryService.deleteCategory(category);
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        return ResponseEntity.ok(category);
 
     }
 
